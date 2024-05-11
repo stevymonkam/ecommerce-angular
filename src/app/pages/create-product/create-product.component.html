@@ -1,0 +1,53 @@
+
+<div class="col-md-8">
+    <div   >
+       <div class="col-md-6">
+          <div class="panel panel-default">
+             <div class="panel-heading" ><h5>name</h5></div>
+             <div class="panel-body">
+                <table>
+                   <tr>
+                      <td rowspan="3"> 
+                        <img   height="150" width="200">
+                        <br>
+                        <br>
+                        <p>
+                            <button >
+                               <span class="glyphicon glyphicon-edit"></span>
+                            </button>
+                         </p>
+                         <p  class="reduirep">
+                            <input type="file" (change)="onSelectedFile($event)">
+                         </p>
+                         
+                         <p>
+                            <button class="btn btn-primary" [disabled]="!onSelectedFile" >Save File</button>
+                         </p>
+
+                         <p>
+                            <select matNativeControl required #mySelect (change)="onChange(mySelect.value)" >
+                               <option value=""></option>
+                               <option *ngFor="let tipo of category" [value]="tipo.id">{{tipo.name}}</option>
+                            </select>
+                         </p>
+                         
+                      </td>
+                   </tr>
+                   <tr>
+                      
+                      <td> 
+                       <h5>price</h5>
+                      </td>
+                   </tr>
+                   <tr>
+                      
+                      <td> 
+                        <h5>description</h5>
+                      </td>
+                   </tr>
+                </table>
+             </div>
+          </div>
+       </div>
+    </div>
+ 
